@@ -21,7 +21,7 @@ struct ExactOutSingle { PoolKey poolKey; bool zeroForOne; uint128 amountOut; uin
 /// Mainnet fork against the deployed contracts: swaps through Uniswap's own
 /// UniversalRouter (+Permit2) and Quoter, with empty hookData.
 contract UniswapRouterFork is Test {
-    IUR constant UR = IUR(0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99); // current UniversalRouter on 4663
+    IUR constant UR = IUR(0x204FAca1764B154221e35c0d20aBb3c525710498); // UniversalRouter 2.1.2 on 4663
     IQuoter constant QUOTER = IQuoter(0x076838736F90Cd1d30dED756A3B89E576BE972F8);
     IPermit2 constant PERMIT2 = IPermit2(0x000000000022D473030F116dDEE9F6B43aC78BA3);
     address constant HOOK = 0x3d1F46aA87bbCdEcB3afb64Db6a84EAce32204cC;

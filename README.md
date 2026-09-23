@@ -113,10 +113,10 @@ cannot borrow its fee logic or its deposit permits — it simply reverts with
 * The pool is a plain static-fee pool. The hook never returns an LP fee
   override and never uses the dynamic-fee flag.
 * Once trading is open the hook never reverts a routed swap.
-* `test/UniswapRouterFork.t.sol` runs Uniswap's own **UniversalRouter**
-  (`0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99`, the current deployment on 4663)
-  and **V4Quoter** against the live deployment, on a mainnet fork, for all four
-  swap shapes with empty hook data: exact-in buy, exact-in sell (via Permit2),
+* `test/UniswapRouterFork.t.sol` runs Uniswap's own **UniversalRouter 2.1.2**
+  (`0x204FAca1764B154221e35c0d20aBb3c525710498` on 4663, the version the Uniswap
+  API routes to by default) and **V4Quoter** against the live deployment, on a
+  mainnet fork, for all four swap shapes with empty hook data: exact-in buy, exact-in sell (via Permit2),
   exact-out sell and exact-out buy. Nothing is mocked and no calldata is
   special-cased.
 
